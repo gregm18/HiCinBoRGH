@@ -1,4 +1,5 @@
 Welcome to HiCinBoRGH 
+by Greg Mercader and Dr. Benjamin Soibam
 
 HiCinBoRGH (Hi-C in Blocks of Refined Groups of Hessian) is a chromatin loop detector utilizing scale-space theory, aiming to take the best concepts from scale-space theory and unsupervised machine learning methods and put them in a powerful, user-friendly approach to chromatin loop detection. 
 
