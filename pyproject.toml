@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "HiCinBoRGH"
+name = "hicinborgh"
 version = "1.0.0"
 description = "A chromatin loop detector utilizing scale-space theory, aiming to take the best concepts from scale-space theory and unsupervised machine learning methods and put them in a powerful, user-friendly approach to chromatin loop detection."
 requires-python = ">=3.10,<3.14"
