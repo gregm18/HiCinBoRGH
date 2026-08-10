@@ -12,3 +12,33 @@ Despite the name, Hessian, being used, users are given the option to use Differe
 
 
 Though HiCinBoRGH can [currently] be ran on Windows operating systems, it is best to run in WSL/Ubuntu or Linux, due to dependencies potentially struggling on Windows operating systems.
+
+
+## Installation
+
+Here are the following requirements for each installation method:
+1. GIT
+2. Python with any versions between 3.10 - 3.14
+
+### Installing with only Python
+
+When installing without external methods, simply open Windows Powershell or a terminal through WSL/Ubuntu and run the following lines of commands.
+
+```bash
+git clone https://github.com/gregm18/HiCinBoRGH.git
+cd HiCinBoRGH
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install .
+```
+
+When the program is installed, proceed to running the program.
+
+#### Running
+
+When running the program, this assumes your directory is set to the project root folder, HiCinBoRGH.
+
+```bash
+.venv\Scripts\activate
+python3 code\hicinborgh.py
+```
+
