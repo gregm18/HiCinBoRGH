@@ -18,7 +18,7 @@ Though HiCinBoRGH can [currently] be ran on Windows operating systems, it is bes
 
 Here are the following requirements for each installation method:
 1. GIT
-2. Python with any versions between 3.10 - 3.14
+2. Python version 3.11
 
 ### Installing with only Python on Linux or WSL/Ubuntu
 
@@ -31,7 +31,7 @@ HiCinBoRGH/.venv/bin/python -m pip install HiCinBoRGH
 
 When the program is installed, proceed to running the program.
 
-#### Running | Linux and WSL
+#### Running
 
 ```bash
 source HiCinBoRGH/.venv/bin/activate
@@ -51,10 +51,27 @@ HiCinBoRGH\.venv\Scripts\python.exe -m pip install HiCinBoRGH
 
 When the program is installed, proceed to running the program.
 
-#### Running | Windows
+#### Running
 
 ```bash
-HiCinBoRGH\.venv\Scripts\activate
+HiCinBoRGH\.venv\Scripts\Activate.ps1
 python HiCinBoRGH\code\hicinborgh.py
 ```
 
+### Installing using Conda
+
+With Conda installed, simply run the following lines of commands to install the program.
+
+```bash
+git clone https://github.com/gregm18/HiCinBoRGH.git
+conda env create -f ./mustache/environment.yml
+```
+
+This will install the program and create an environment named "hicinborgh"
+
+#### Running
+
+```bash
+conda activate hicinborgh
+python3 HiCinBoRGH/code/hicinborgh.py
+```
