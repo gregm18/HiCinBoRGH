@@ -20,25 +20,41 @@ Here are the following requirements for each installation method:
 1. GIT
 2. Python with any versions between 3.10 - 3.14
 
-### Installing with only Python
+### Installing with only Python on Linux or WSL/Ubuntu
 
-When installing without external methods, simply open Windows Powershell or a terminal through WSL/Ubuntu and run the following lines of commands.
-
+When installing without external methods, simply open your terminal or Windows Powershell then power on WSL/Ubuntu and run the following commands.
 ```bash
 git clone https://github.com/gregm18/HiCinBoRGH.git
-cd HiCinBoRGH
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install .
+python3 -m venv HiCinBoRGH/.venv
+HiCinBoRGH/.venv/bin/python -m pip install HiCinBoRGH
 ```
 
 When the program is installed, proceed to running the program.
 
-#### Running
-
-When running the program, this assumes your directory is set to the project root folder, HiCinBoRGH.
+#### Running | Linux and WSL
 
 ```bash
-.venv\Scripts\activate
-python3 code\hicinborgh.py
+source HiCinBoRGH/.venv/bin/activate
+python3 HiCinBoRGH/code/hicinborgh.py
+```
+
+
+### Installing with only Python on Windows
+
+When installing without external methods, simply open Windows Powershell run the following lines of commands.
+
+```bash
+git clone https://github.com/gregm18/HiCinBoRGH.git
+python -m venv HiCinBoRGH\.venv
+HiCinBoRGH\.venv\Scripts\python.exe -m pip install HiCinBoRGH
+```
+
+When the program is installed, proceed to running the program.
+
+#### Running | Windows
+
+```bash
+HiCinBoRGH\.venv\Scripts\activate
+python HiCinBoRGH\code\hicinborgh.py
 ```
 
