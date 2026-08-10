@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "HiCinBoRGH"
+version = "1.0.0"
+description = "A chromatin loop detector utilizing scale-space theory, aiming to take the best concepts from scale-space theory and unsupervised machine learning methods and put them in a powerful, user-friendly approach to chromatin loop detection."
+requires-python = ">=3.10,<3.14"
+
+dependencies = [
+    "numpy",
+    "scikit-image==0.26.0",
+    "cooler==0.10.4",
+    "scipy",
+    "statsmodels",
+    "psutil",
+    "scikit-learn",
+    "matplotlib"
+]
