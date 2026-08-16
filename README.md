@@ -12,7 +12,7 @@ Despite the name, Hessian, being used, users are given the option to use Differe
 Though HiCinBoRGH can [currently] be ran on Windows operating systems, it is best to run in WSL/Ubuntu or Linux, due to dependencies potentially struggling on Windows operating systems.
 
 
-## Installation
+## Installation and Running HiCinBoRGH
 
 Here are the following requirements for each installation method:
 1. GIT
@@ -87,4 +87,44 @@ Here are the list of dependencies that HiCinBoRGH relies on:
   - scikit-learn
   - matplotlib
 
+## How to use HiCinBoRGH
+
+Before you run HiCinBoRGH, you must do the following:
+1. Place your .mcool file in the data folder
+2. If making comparisons to MUSTACHE, place MUSTACHE's output directly in the data folder alongside your .mcool file with the following name:
+```bash
+chr[chromosome number]_out[raw resolution divided by 1000]_pt[p-value threshold with no decimal].tsv
+```
+For example:
+```bash
+chr1_out10_pt005.tsv
+```
+This represents the result of chromosome 1 at 10kb resolution with a 0.05 p-value threshold retrieved from MUSTACHE. For accurate comparisons, it is expected that a sparsity threshold of 0.8 is used in the given MUSTACHE output.
+
+Once this is complete and you run the program, HiCinBoRGH will ask you for a line of parameters that HiCinBoRGH will use for its chromatin loop detection process.
+
+Here is the list of parameters in order:
+```bash
+<mcool_file> <start_chr> <end_chr> <resolution> <p_value> <norm> <dog/doh> <comparison to mustache>
+```
+
+### Examples
+Here are some examples of lines of parameters to run HiCinBoRGH:
+
+Example 1: Running GSE63525_GM12878_diploid_maternal.mcool on chromosome 5 only at 5kb resolution with a 0.1 p-value threshold, Knight-Ruiz normalization, Determinant of Hessian scale-space representation, and comparison to MUSTACHE
+```bash
+GSE63525_GM12878_diploid_maternal.mcool 5 5 5kb 0.1 kr doh y
+```
+
+Example 2: Running GSE63525_GM12878_insitu_DpnII_combined_30.mcool on chromosomes 1 through 22 at 10kb resolution with a 0.05 p-value threshold, Knight-Ruiz normalization, Determinant of Hessian scale-space representation, and comparison to MUSTACHE
+```bash
+GSE63525_GM12878_insitu_DpnII_combined_30.mcool 1 22 10kb 0.05 kr doh y
+```
+
+Example 3: Running GSE63525_GM12878_insitu_DpnII_combined_30.mcool on chromosome X at 10kb resolution with a 0.05 p-value threshold, ICE normalization, Difference of Gaussian scale-space representation, and no comparison to MUSTACHE
+```bash
+GSE63525_GM12878_insitu_DpnII_combined_30.mcool 23 23 10kb 0.05 ice dog n
+```
+
+## Parameters
 
