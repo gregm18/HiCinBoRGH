@@ -3,9 +3,7 @@ Welcome to
 
 by Greg Mercader and Dr. Benjamin Soibam
 
-HiCinBoRGH (Hi-C in Blocks of Refined Groups of Hessian) is a chromatin loop detector utilizing scale-space theory, aiming to take the best concepts from scale-space theory and unsupervised machine learning methods and put them in a powerful, user-friendly approach to chromatin loop detection. 
-
-As of this point, HiCinBoRGH takes the best concepts of the multi-scale loop detector, MUSTACHE, from both its code and research paper documentation and frames them in a way that works best with our approach thus far. This is not to say that this program is perfect, as there is great and exciting room for improvement.
+HiCinBoRGH (Hi-C in Blocks of Refined Groups of Hessian) is a chromatin loop detector utilizing scale-space theory, aiming to take the best concepts from scale-space theory and unsupervised machine learning methods and put them in a powerful, user-friendly approach to chromatin loop detection. It is currently heavily based on the program, MUSTACHE, for its innovative concepts on the subject.
 
 Despite the name, Hessian, being used, users are given the option to use Difference of Gaussian and Determinant of Hessian accordingly and developers are free to add more types of scale-space representation as technology advances.
 
@@ -60,16 +58,17 @@ python HiCinBoRGH\code\hicinborgh.py
 
 ### Installing using Conda
 
-With Conda installed, simply run the following lines of commands to install the program.
+With Conda installed, simply run the following lines of commands in a terminal using WSL/Linux to install the program. 
+This will install the program and create an environment named "hicinborgh"
 
 ```bash
 git clone https://github.com/gregm18/HiCinBoRGH.git
 conda env create -f ./mustache/environment.yml
 ```
 
-This will install the program and create an environment named "hicinborgh"
-
 #### Running
+
+The following lines of commands will activate the hicinborgh environment and run the program via the hicinborgh.py file.
 
 ```bash
 conda activate hicinborgh
