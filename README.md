@@ -74,3 +74,17 @@ The following lines of commands will activate the hicinborgh environment and run
 conda activate hicinborgh
 python3 HiCinBoRGH/code/hicinborgh.py
 ```
+
+## Dependencies
+Here are the list of dependencies that HiCinBoRGH relies on:
+  - python=3.11
+  - numpy
+  - scikit-image=0.26.0
+  - cooler=0.10.4
+  - scipy
+  - statsmodels
+  - psutil
+  - scikit-learn
+  - matplotlib
+
+
