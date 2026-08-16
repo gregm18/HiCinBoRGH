@@ -1,0 +1,16 @@
+name: hicinborgh
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - numpy
+  - scikit-image=0.26.0
+  - cooler=0.10.4
+  - scipy
+  - statsmodels
+  - psutil
+  - scikit-learn
+  - matplotlib
+  
