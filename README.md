@@ -103,7 +103,7 @@ This represents the result of chromosome 1 at 10kb resolution with a 0.05 p-valu
 
 Once this is complete and you run the program, HiCinBoRGH will ask you for a line of parameters that HiCinBoRGH will use for its chromatin loop detection process.
 
-Here is the list of parameters in order:
+Here is the list of parameters in order of entry:
 ```bash
 <mcool_file> <start_chr> <end_chr> <resolution> <p_value> <norm> <dog/doh> <comparison to mustache>
 ```
@@ -127,4 +127,35 @@ GSE63525_GM12878_insitu_DpnII_combined_30.mcool 23 23 10kb 0.05 ice dog n
 ```
 
 ## Parameters
+
+Here is the list of parameters in order of entry:
+```bash
+<mcool_file> <start_chr> <end_chr> <resolution> <p_value> <norm> <dog/doh> <comparison to mustache>
+```
+
+Here is a table describing each parameter for an in-depth understanding:
+
+Parameter Name | Data Format | Description
+--- | --- | ---
+`<mcool_file>` | string | This is where the exact file name (including extension format) is written. e.g.: filename.mcool
+`<start_chr>` | int (integer) | The first chromosome to be checked for chromatin loops. Chromosomes X, Y, and MT are 23, 24, and 25 respectively. e.g.: 7
+`<end_chr>` | int (integer) | The last chromosome to be checked for chromatin loops. If you are only looking at one chromosome, simply make this number the same as your start_chr number. Chromosomes X, Y, and MT are 23, 24, and 25 respectively. e.g.: 3, 7
+`<resolution>` | int + kb/mb | This is the resolution HiCinBoRGH will open your chromosome(s) at. HiCinBoRGH will only be able to open the resolution if it is available in your .mcool file. e.g.: 25kb, 10kb, 5kb
+`<p_value>` | float (decimal number) | The threshold of p-value in which loops are valuable according to Benjamini-Hochberg procedure.
+`<norm>` | string | The normalization your file is opened at as read by cooler. e.g.: KR, ICE, NONE (simply requests the raw matrix)
+`<dog/doh>` | string | The scale-space representation you wish HiCinBoRGH to detect chromatin loops with. e.g.: dog = Difference of Gaussian, doh = Determinant of Hessian.
+`<comparison to mustache>` | string | Confirms whether you wish to compare your HiCinBoRGH output to your MUSTACHE output. When comparing, output from MUSTACHE must be placed in the data folder. e.g: y, n
+
+## Input Format
+Currently, HiCinBoRGH only has support for .mcool files. All .mcool files are to be placed in the data folder. If you are making comparisons to MUSTACHE output, then your .tsv files are to be placed in the data folder as well. 
+
+If you have a .hic file, the hic2cool python package has a simple way of converting .hic files to .mcool files. The cooler dependency installed with this program also has the abiltiy to add balancing weights to your new .mcool file if necessary.
+
+## Output Format
+HiCinBoRGH produces a new .csv file that gives a list of every loop with the category, chromosome number, coordinates, sigma scale they were detected at, scale-space score, and p and q values.
+
+Here is the set up as follows
+`Category, Chromosome, bin1, bin2, DoH/DoG score, p-value, q`
+
+
 
