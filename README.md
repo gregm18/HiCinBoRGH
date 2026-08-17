@@ -104,6 +104,7 @@ This represents the result of chromosome 1 at 10kb resolution with a 0.05 p-valu
 Once this is complete and you run the program, HiCinBoRGH will ask you for a line of parameters that HiCinBoRGH will use for its chromatin loop detection process.
 
 Here is the list of parameters in order of entry:
+
 `<mcool_file> <start_chr> <end_chr> <resolution> <p_value> <norm> <dog/doh> <comparison to mustache>`
 
 ### Examples
