@@ -107,7 +107,7 @@ Here is the list of parameters in order of entry:
 
 `<mcool_file> <start_chr> <end_chr> <resolution> <p_value> <norm> <dog/doh> <comparison to mustache>`
 
-Once you enter your parameters, you are done! HiCinBoRGH will do its work to detect loops on its own and save your output and images of windows for each chromosome containing the best number of loops.
+Once you enter your parameters, you are done! HiCinBoRGH will do its work to detect loops on its own and save your output and images of windows for each chromosome containing the largest number of loops.
 
 ### Examples
 Here are some examples of lines of parameters to run HiCinBoRGH:
